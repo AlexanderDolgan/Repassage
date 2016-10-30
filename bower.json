@@ -1,0 +1,25 @@
+{
+  "name": "Repassage",
+  "homepage": "https://github.com/AlexanderDolgan/Repassage",
+  "authors": [
+    "Alexander Dolgan <5704737@gmail.com>"
+  ],
+  "description": "repair watch service Repassage",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "modernizr": "~3.3.1",
+    "breakpoint-sass": "^2.7.0",
+    "normalize-scss": "normalize.scss#^5.0.3"
+  }
+}
