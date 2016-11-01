@@ -1,0 +1,55 @@
+@import "util/mixin";
+@import "util/sprites.scss";
+
+//Global
+$global-font-family: 'Playfair Display', serif;
+$sans-serif-font-family: 'Roboto Condensed', sans-serif;
+$global-font-size: 16px;
+$global-line-height: $global-font-size*1.5;
+$font-smooth: antialiased;
+
+//Colors
+$brand-palette: (
+        primary: #65459b,
+        gradient-first: #8365ae,
+        gradient-second: #4e4f98,
+        secondary: #e4a226,
+        success: #3adb76,
+        warning: #ffae00,
+        alert: #ec5840
+);
+
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #4A4A4A;
+$dark-black: #1f1f1f;
+$white: #fefefe;
+
+$body-background: $white;
+$body-font-color: $black;
+
+@include add-brand-colors;
+
+// Media q breakpoints
+
+$b-small: 0;
+$b-medium: 48em; //1024px
+$b-large: 75em; //1200px
+$b-xlarge: 90em;//1440px
+$b-xxlarge: 100em;//1600px
+
+$b-small-only: 0 39.9375em;
+$b-medium-only: 39.9375em 64em;
+$b-large-only: 64em 75em;
+$b-xlarge-only: 75em;
+
+//container width
+$container-width: 75em;
+
+//Typography
+
+$header-font-family: 'Oranienbaum', serif;
+$header-color: $body-font-color;
+$header-lineheight: $global-line-height;
+$paragraph-lineheight: $global-line-height;

@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+//owl selector
+*+* {
+  margin-top: 1.5rem;
+}
+
+html {
+  font-size: $global-font-size;
+}
+
+body {
+  font-family: $global-font-family;
+  color: $black;
+  line-height: $global-line-height;
+  background-color: $body-background;
+  -webkit-font-smoothing: $font-smooth;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($primary-color, 15%);
+    text-decoration: underline;
+  }
+}
+
