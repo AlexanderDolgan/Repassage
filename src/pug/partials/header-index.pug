@@ -1,0 +1,14 @@
+header#site-header
+	.ham-btn
+		span
+		span
+		span
+	nav.top-nav
+		h2 Разделы
+		//nav iteration
+		each val in [['Главная', 'index'], ['Ремонт Часов','repair'], ['Часы на продаже', 'shop'], ['Наши работы','pholio'], ['Аксессуары', 'accessories'], ['Обзоры', 'blog'], ['Контакты', 'contacts']]
+
+			a(href=val[1] + ".html")=val[0]
+
+
+//button.btn.btn-brand-color(name="send" type="button" value="repair") Ремонт часов

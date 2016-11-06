@@ -1,0 +1,71 @@
+.ham-btn {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    background-color: $black;
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    border-radius: 6px;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+  span:nth-child(1) {
+    top: 0;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  span:nth-child(2) {
+    top: 12px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  span:nth-child(3) {
+    top: 24px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+}
+
+.ham-btn.ham-open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+.ham-btn.ham-open span:nth-child(2) {
+  top: 25px;
+  position: relative;
+  opacity: 0;
+}
+
+.ham-btn.ham-open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 25px;
+  left: 8px;
+}

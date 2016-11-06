@@ -8,12 +8,93 @@
     display: inline-block;
     background-image: url("../img/sprites/svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 0em 0em;
+    background-size: 90em 90em;
 }
 
 .no-svg .icon:before {
     background-image: url("../svg/sprite.png");
 }
+
+
+
+  .icon.access-round-icon:before {
+      background-position: 0em 0em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.close-btn:before {
+      background-position: -10em -10em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.f-btn:before {
+      background-position: -20em -20em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.hum-btn:before {
+      background-position: -30em -30em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.sertif-round-icon:before {
+      background-position: -40em -40em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.tools-round-icon:before {
+      background-position: -50em -50em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.tw-btn:before {
+      background-position: -60em -60em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.wach-round-icon:before {
+      background-position: -70em -70em;
+      width: 10em;
+      height: 10em;
+  }
+
+
+
+
+  .icon.water-round-icon:before {
+      background-position: -80em -80em;
+      width: 10em;
+      height: 10em;
+  }
+
 
 
 

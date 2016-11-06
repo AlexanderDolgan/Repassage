@@ -1,0 +1,26 @@
+.top-nav {
+  @include container();
+  display: none;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+  & > h2 {
+    text-align: center;
+  }
+  & > a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+}
+
+.top-nav > a:hover,
+.top-nav > a:focus,
+.top-nav > a:active {
+  background-color: rgba(255,255,255,.5);
+}

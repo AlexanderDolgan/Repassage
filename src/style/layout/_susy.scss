@@ -8,7 +8,7 @@ $susy: (
         math: fluid,
         output: float,
         gutter-position: after,
-        container: container-width,
+        container: $container-width,
         container-position: center,
         columns: 12,
         gutters: 0.25,
