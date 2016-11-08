@@ -3,6 +3,8 @@ header#site-header
 		span
 		span
 		span
+
+	//top navigation module
 	nav.top-nav
 		h2 Разделы
 		//nav iteration
@@ -10,5 +12,22 @@ header#site-header
 
 			a(href=val[1] + ".html")=val[0]
 
+		.social-icons
+			a(href="//www.facebook.com/watchsochi/?ref=aymt_homepage_panel")
+				svg(viewBox="0 0 100 100" class="icon f-btn")
+					use(xlink:href="#f-btn")
 
-//button.btn.btn-brand-color(name="send" type="button" value="repair") Ремонт часов
+			a(href="//www.facebook.com/watchsochi/?ref=aymt_homepage_panel")
+				svg(viewBox="0 0 100 100" class="icon tw-btn")
+					use(xlink:href="#tw-btn")
+
+	//hero section
+	section.l-hero.is-centered
+		.logo
+			img(src="img/assets/logo.svg")
+
+		h1 ПРОДАЖА И РЕМОНТ ЧАСОВ
+
+		adress Адрес: г. Сочи, ул. Орджоникидзе 11 Тел. : +7 (918) 678-33-66
+
+		a(href="#send-form").btn.btn-brand-color Запись на сервис

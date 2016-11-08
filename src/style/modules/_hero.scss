@@ -1,0 +1,22 @@
+.l-hero {
+  text-align: center;
+  & .logo {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  & h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+
+  & adress {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  & a {
+    margin-top: 5rem;
+  }
+}

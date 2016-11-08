@@ -1,0 +1,87 @@
+.right-side {
+  display: none;
+}
+
+.service-block header{
+  position: relative;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, $gradient-first-color, $gradient-second-color);
+  & > h2 {
+    color: $white;
+  }
+  & > a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.service-block__body {
+    padding: 5rem 1rem;
+  & img {
+    margin-top: 3rem;
+    max-width: 25rem;
+  }
+}
+
+@include susy-breakpoint($b-medium) {
+
+  .left-side {
+    @include span(6 inside no-gutters);
+    padding-left: span(1);
+  }
+
+  .right-side {
+    display: block;
+    @include span(6 last inside no-gutters);
+  }
+
+  .right-side {
+    min-height: 580px;
+    &__img{
+      background-position: center;
+      min-height: 580px;
+    }
+    & .rep-img{
+      background-image: url("../img/assets/service-img.jpg");
+    }
+    & .watch-img{
+      background-image: url("../img/assets/watch-img.jpg");
+    }
+    & .folio-img{
+      background-image: url("../img/assets/folio-img.jpg");
+    }
+  }
+
+  .service-block header {
+    position: relative;
+    min-height: 17.5rem;
+    & h2::before {
+      display: block;
+      position: absolute;
+      right: 100%;
+      width: 30px;
+      height: 30px;
+      background-image: url("#watch-white-icon");
+    }
+    & .rep-title::before {
+      content: url(../img/assets/tools-white-icon.svg);
+    }
+    & .watch-title::before {
+      content: url(../img/assets/watch-white-icon.svg);
+    }
+    & .folio-title::before {
+      content: url(../img/assets/folio-white-icon.svg);
+    }
+  }
+
+  .service-block header::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: $gradient-first-color;
+    position: absolute;
+    width: 150rem;
+    top: 0;
+    right: 100%;
+  }
+}

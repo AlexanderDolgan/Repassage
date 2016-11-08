@@ -3,11 +3,14 @@
 $(document).ready(function () {
 
     var $nav = $('.top-nav'),
-        $hamBtn = $('.ham-btn');
+        $hamBtn = $('.ham-btn'),
+        $lHero = $('.l-hero');
 
-    $hamBtn.on('click touchstart', function (evt) {
+    $hamBtn.stop().on('click touchstart', function (evt) {
         evt.preventDefault();
         $hamBtn.toggleClass('ham-open');
+        $lHero.fadeToggle(0);
+
         if ($nav.css('display') === 'flex') {
             $nav.css('display', 'none');
             console.log($nav.css('display'));

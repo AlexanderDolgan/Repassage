@@ -1,0 +1,16 @@
+.icon:hover {
+  fill:$primary-color;
+}
+
+//top nav social icons
+
+.f-btn, .tw-btn {
+  height: 34px;
+  margin: .5rem;
+  fill: #c8c8c8;
+}
+
+//services block round icons
+[class*="-round-icon"] {
+  width: 7.5rem;
+}

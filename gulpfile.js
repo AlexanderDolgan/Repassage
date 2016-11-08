@@ -8,14 +8,12 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     prefixer = require('gulp-autoprefixer'),
     cleancss = require('gulp-clean-css'),    //Minify css with clean-css.
-
+    svgSprite = require('gulp-svg-sprite'),  //Create svg sprites
     uglify = require('gulp-uglify'),         //Minify files with UglifyJS.
     sourcemaps = require('gulp-sourcemaps'),
 
     imagemin = require('gulp-imagemin'),      //Minify PNG, JPEG, GIF and SVG images
     pngquant = require('imagemin-pngquant'),
-    svgSprite = require("gulp-svg-sprites"),  //Create SVG sprites with PNG fallbacks
-
     rigger = require('gulp-rigger'),          //Rigger is a build time include engine for Javascript,
                                               // CSS, CoffeeScript and in general any type of text file
                                               // that you wish to might want to "include" other files into.
@@ -34,7 +32,6 @@ var path = {
     build: {
         fonts: 'build/fonts/',
         img: 'build/img/',
-        icons: 'src/img/assets/icons/sprites',
         //html: 'build/',
         pug: 'build/',
         js: 'build/js/',
@@ -44,7 +41,6 @@ var path = {
     src: {
         fonts: 'src/fonts/**/*.*',
         img: 'src/img/**/*.*',
-        icons: 'src/img/assets/icons/*.*',
         //html: 'src/*.html',
         pug: 'src/pug/*.pug',
         js: 'src/js/*.js',
@@ -54,7 +50,6 @@ var path = {
     watch: {
         fonts: 'src/fonts/**/*.*',
         img: 'src/img/**/*.*',
-        icons: 'src/img/assets/icons/*.*',
         //html: 'src/**/*.html',
         pug: 'src/pug/**/*.pug',
         js: 'src/js/**/*.js',
@@ -74,7 +69,6 @@ var config = {
     port: 9000,
     logPrefix: "heritage"
 };
-
 
 function onError(err) {
     console.log(err);
@@ -132,6 +126,24 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
+// Config svg sprite
+var svgConfig = {
+    mode                    : {
+        inline              : true,     // Prepare for inline embedding
+        symbol              : true      // Create a «symbol» sprite
+    }
+};
+
+gulp.task('svgSprite:build', function () {
+    gulp.src('src/img/assets/icons/*.svg')
+        .pipe(svgSprite(svgConfig))
+        .pipe(gulp.dest('src/img/assets/'))
+        .on('error', function (err) {
+            gutil.log(err.message);
+        })
+        .pipe(reload({stream: true}));
+});
+
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
         .pipe(imagemin({
@@ -142,19 +154,6 @@ gulp.task('image:build', function () {
         }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
-});
-
-// Sprites
-gulp.task('svgSptites:build', function () {
-    gulp.src(path.src.icons)
-        .pipe(svgSprite({
-            templates: {scss: true},
-            cssFile: "../../style/util/_sprites.scss",
-            svgPath: "../img/sprites/svg/sprite.svg",
-            bust: false,
-            layout: "diagonal"
-        }))
-        .pipe(gulp.dest('src/img/sprites'))
 });
 
 // Fonts
@@ -170,7 +169,7 @@ gulp.task('build', [
     'style:build',
     'image:build',
     'fonts:build',
-    'svgSptites:build'
+    'svgSprite:build'
 ]);
 
 gulp.task('watch', function () {
@@ -189,8 +188,8 @@ gulp.task('watch', function () {
     watch([path.watch.img], function (event, cb) {
         gulp.start('image:build');
     });
-    watch([path.watch.icons], function (event, cb) {
-        gulp.start('svgSptites:build');
+    watch(['src/img/assets/icons'], function (event, cb) {
+        gulp.start('svgSprite:build');
     });
     watch([path.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');

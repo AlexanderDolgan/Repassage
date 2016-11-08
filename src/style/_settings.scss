@@ -1,5 +1,4 @@
 @import "util/mixin";
-@import "util/sprites.scss";
 
 //Global
 $global-font-family: 'Playfair Display', serif;
@@ -51,7 +50,10 @@ $container-width: 75em;
 //Typography
 
 $header-font-family: 'Oranienbaum', serif;
+$header-font-weight: 100;
 $header-color: $body-font-color;
-$header-lineheight: $global-line-height;
+$header-lineheight: 1.2;
 
 $paragraph-lineheight: $global-line-height;
+
+$block-padding: 6rem 0;

@@ -1,0 +1,57 @@
+main#site-main
+	//services section
+	section.wrap.l-services
+
+		each val in [['tools', 'Осуществляем ремонт швейцарских часов в городе Сочи'], ['water', 'Проверяем герметичность часов'], ['watch','Продаем швейцарские часы б.у.'], ['access', 'Предлагаем широкий выбор часовых аксессуаров и часовых ремешков'], ['sertif', 'Определяем подлинность часов']]
+
+			.service-item
+				svg(viewBox="0 0 100 100" class="icon " + val[0] + "-round-icon")
+					use(xlink:href="#" + val[0] + "-round-icon")
+
+				p=val[1]
+
+	section.wrap.service-block
+		.left-side
+			header
+				h2.rep-title Ремонт и профилактика
+				a(href="#") Ремонт часов
+			.service-block__body
+				ul
+					li Репассаж (чистка и смазка механизма);
+					li Полировка корпуса часов;
+					li Регулировка точности хода;
+					li Сложный ремонт механических часов;
+					li Проверка часов на герметичность;
+					li Замена элементов питания;
+					li Замена ремней и браслетов;
+					li Оценка часов;
+					li Прием часов на комиссию;
+					li Подбор ремней;
+					li Подклейка выпавших цифр и рисок;
+					li Продажа комисионных часов.
+		.right-side
+			.right-side__img.rep-img
+
+	section.wrap.service-block
+		.left-side
+			header
+				h2.watch-title Продажа часов
+				a(href="#") Перейти в Каталог часов
+			.service-block__body
+				p.
+					В нашем салоне вы можете приобрести часы от зарекомендовавших себя на рынке брендов.
+				img(src="../img/assets/sale-brands.svg")
+		.right-side
+			.right-side__img.watch-img
+
+	section.wrap.service-block
+		.left-side
+			header
+				h2.folio-title Наши работы
+				a(href="#") Выполненные работы
+			.service-block__body
+				p.
+					В нашем салоне вы можете подобрать ремешки для часов,  боксы, а так же другие необходимые вещи.
+
+		.right-side
+			.right-side__img.folio-img

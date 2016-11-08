@@ -1,7 +1,7 @@
 {
-  "name": "heritage",
+  "name": "repassag",
   "version": "0.0.0",
-  "description": "real estate heritage",
+  "description": "watch repair",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +11,8 @@
     "url": "git+https://github.com/AlexanderDolgan/Heritage.git"
   },
   "keywords": [
-    "real",
-    "estate",
-    "heritage"
+    "watch",
+    "repassag"
   ],
   "author": "Alexander Dolgan",
   "license": "ISC",
@@ -22,24 +21,24 @@
   },
   "homepage": "https://github.com/AlexanderDolgan/Heritage#readme",
   "dependencies": {
+    "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.9",
-    "gulp-pug": "^3.0.4",
-    "gulp-sass": "^2.3.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.12",
-    "gulp-uglify": "^2.0.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-imagemin": "^3.0.3",
-    "imagemin-pngquant": "^5.0.0",
-    "gulp-svg-sprites": "^4.0.2",
-    "browser-sync": "^2.16.0",
-    "gulp-rigger": "^0.5.8",
-    "gulp-plumber": "^1.1.0",
-    "rimraf": "^2.5.4",
-    "gulp-util": "^3.0.7",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-imagemin": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.9",
+    "imagemin-pngquant": "^5.0.0",
+    "rimraf": "^2.5.4"
   }
 }

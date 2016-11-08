@@ -3,4 +3,10 @@
   height: 100vh;
   background-image: url("../img/assets/pattern-bright.svg");
   background-size: 15rem;
+  position: relative;
 }
+
+.wrap {
+  @include container(collapse);
+}
+
