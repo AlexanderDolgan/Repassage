@@ -1,0 +1,30 @@
+.l-text-block {
+  padding: 3rem 1rem;
+}
+
+.l-text-block p {
+  text-align: justify;
+}
+
+//first letter
+.l-text-block p:first-child:first-letter {
+  font-size: 4.875rem;
+  color: $secondary-color;
+  font-weight: 700;
+  float: left;
+  margin: 0 .3rem .3rem;
+}
+
+.l-text-block > p:first-child {
+  margin: 0;
+}
+
+@include susy-breakpoint($b-medium) {
+  .l-text-block{
+    padding: $block-padding;
+    @include pre(1);
+    @include span(10);
+    column-count: 2;
+    column-gap: 3rem;
+  }
+}

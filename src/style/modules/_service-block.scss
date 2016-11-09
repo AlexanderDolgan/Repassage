@@ -1,7 +1,8 @@
-.right-side {
-  display: none;
+.service-block {
+  @include susy-clearfix();
 }
 
+//service header
 .service-block header{
   position: relative;
   padding: 3rem 1rem;
@@ -15,6 +16,7 @@
   }
 }
 
+//service content
 .service-block__body {
     padding: 5rem 1rem;
   & img {
@@ -23,20 +25,66 @@
   }
 }
 
+//remove image on mobile
+.right-side {
+  display: none;
+}
+
 @include susy-breakpoint($b-medium) {
 
+  //left side with main information
   .left-side {
     @include span(6 inside no-gutters);
     padding-left: span(1);
   }
 
-  .right-side {
+  //add colored block before header
+  .service-block header::before {
+    content: '';
     display: block;
-    @include span(6 last inside no-gutters);
+    height: 100%;
+    background-color: $gradient-first-color;
+    position: absolute;
+    width: 150rem;
+    top: 0;
+    right: 100%;
   }
 
+  //service header
+  .service-block header {
+    position: relative;
+    min-height: 17.5rem;
+    & h2::before {
+      display: block;
+      position: absolute;
+      right: 100%;
+      width: 30px;
+      height: 30px;
+      background-image: url("#watch-white-icon");
+    }
+
+    //service header icons
+    & .rep-title::before {
+      content: url(../img/assets/tools-white-icon.svg);
+    }
+    & .watch-title::before {
+      content: url(../img/assets/watch-white-icon.svg);
+    }
+    & .folio-title::before {
+      content: url(../img/assets/folio-white-icon.svg);
+    }
+    & .access-title::before {
+      content: url(../img/assets/access-white-icon.svg);
+    }
+  }
+
+  //right side content with big image
   .right-side {
+    display: block;
+    @include span(6 inside no-gutters);
     min-height: 580px;
+    margin-bottom: 5rem;
+
     &__img{
       background-position: center;
       min-height: 580px;
@@ -50,38 +98,9 @@
     & .folio-img{
       background-image: url("../img/assets/folio-img.jpg");
     }
-  }
-
-  .service-block header {
-    position: relative;
-    min-height: 17.5rem;
-    & h2::before {
-      display: block;
-      position: absolute;
-      right: 100%;
-      width: 30px;
-      height: 30px;
-      background-image: url("#watch-white-icon");
-    }
-    & .rep-title::before {
-      content: url(../img/assets/tools-white-icon.svg);
-    }
-    & .watch-title::before {
-      content: url(../img/assets/watch-white-icon.svg);
-    }
-    & .folio-title::before {
-      content: url(../img/assets/folio-white-icon.svg);
+    & .access-img{
+      background-image: url("../img/assets/access-img.jpg");
     }
   }
 
-  .service-block header::before {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: $gradient-first-color;
-    position: absolute;
-    width: 150rem;
-    top: 0;
-    right: 100%;
-  }
 }
