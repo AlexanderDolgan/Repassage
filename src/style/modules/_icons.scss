@@ -1,16 +1,38 @@
 .icon:hover {
-  fill:$primary-color;
+  fill: $primary-color;
+}
+
+.icon {
+  fill: #c8c8c8;
 }
 
 //top nav social icons
-
-.f-btn, .tw-btn {
-  height: 34px;
+.top-nav .f-btn,
+.top-nav .tw-btn {
+  height: 2.175rem;
   margin: .5rem;
-  fill: #c8c8c8;
 }
 
 //services block round icons
 [class*="-round-icon"] {
   width: 7.5rem;
+}
+
+@include susy-breakpoint($b-medium) {
+  //top nav social icons
+  .social-icons {
+    & a {
+      text-decoration: none;
+      display: inline-block;
+      height: 2.75rem;
+      width: 2.75rem;
+    }
+    position: absolute;
+    right: 1rem;
+  }
+  .top-nav .f-btn,
+  .top-nav .tw-btn {
+    height: 1.1rem;
+  }
+
 }

@@ -2,11 +2,18 @@
   //height: 950px;
   height: 100vh;
   background-image: url("../img/assets/pattern-bright.svg");
+  background-attachment: fixed;
   background-size: 15rem;
   position: relative;
 }
 
+//container 75rem;
 .wrap {
   @include container(collapse);
+}
+
+//container auto width
+.wrap-full {
+  @include container(auto);
 }
 

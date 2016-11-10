@@ -69,3 +69,9 @@
   top: 25px;
   left: 8px;
 }
+
+@include susy-breakpoint($b-medium) {
+  .ham-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+//main block b/w bg + colored graient on top
+.color-block {
+  padding: $block-padding;
+  background-image: linear-gradient(to right,$gradient-first-color,$gradient-second-color);
+}
+
+.color-block-content {
+  @include container();
+}
+
+// paragraph
+.color-block p {
+  @include span(10);
+  @include pre(1);
+  @include susy-clearfix();
+  text-align: center;
+  color: $white;
+  font-family: $sans-serif-font-family;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+@include susy-breakpoint($b-medium) {
+  //main block b/w bg + colored graient on top
+  .color-block {
+    background-image: url("../img/assets/color-bg.png"), linear-gradient(to right,$gradient-first-color,$gradient-second-color);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  // paragraph
+  .color-block p {
+    @include span(10);
+    @include pre(1);
+    @include susy-clearfix();
+    font-size: 1.75rem;
+  }
+}

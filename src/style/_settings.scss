@@ -4,10 +4,10 @@
 $global-font-family: 'Playfair Display', serif;
 $sans-serif-font-family: 'Roboto Condensed', sans-serif;
 $global-font-size: 16px;
-$global-line-height: $global-font-size*1.5;
+$global-line-height: 1.5;
 $font-smooth: antialiased;
 
-//Colors
+//Colors - не поддтягиваются в phpStorm из-за использования map
 $brand-palette: (
         primary: #65459b,
         gradient-first: #8365ae,

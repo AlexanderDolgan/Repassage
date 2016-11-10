@@ -1,10 +1,11 @@
+//header center block
 .l-hero {
   text-align: center;
   & .logo {
     margin: 0 auto;
-    width: 200px;
+    width: 12.5rem;
   }
-
+  //primary header
   & h1 {
     font-size: 3rem;
     margin: 2rem 0;
@@ -12,11 +13,31 @@
 
   & adress {
     display: block;
-    max-width: 300px;
+    max-width: 18.75rem;
     margin: 0 auto;
   }
-
+  //btn link
   & a {
     margin-top: 5rem;
   }
 }
+
+@include susy-breakpoint($b-medium) {
+
+  //header center block
+  .l-hero {
+    min-width: 30rem;
+    //primary header
+    & h1 {
+      font-size: 3.875rem;
+      margin: 4rem 0;
+    }
+    //btn link
+    & a {
+      margin-top: 5rem;
+    }
+  }
+
+}
+
+
