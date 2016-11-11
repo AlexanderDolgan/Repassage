@@ -21,6 +21,7 @@
     "modernizr": "~3.3.1",
     "breakpoint-sass": "^2.7.0",
     "normalize-scss": "normalize.scss#^5.0.3",
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "juice": "^1.0.1"
   }
 }

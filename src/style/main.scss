@@ -1,6 +1,9 @@
 //import reset normalize
 @import "../../bower_components/normalize.css/normalize.css";
 
+//Juice sass mixins https://github.com/kjbrum/juice
+@import "../../bower_components/juice/dist/juice";
+
 //settings - variables
 @import "settings";
 
