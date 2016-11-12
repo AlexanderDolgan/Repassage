@@ -1,13 +1,10 @@
-.l-text-block {
-  padding: 3rem 1rem;
-}
-
-.l-text-block p {
+//two column text
+.column-text p {
   text-align: justify;
 }
 
 //first letter
-.l-text-block p:first-child:first-letter {
+.column-text p:first-child:first-letter {
   font-size: 4.875rem;
   color: $secondary-color;
   font-weight: 700;
@@ -16,13 +13,12 @@
   margin: 0 .3rem .3rem;
 }
 
-.l-text-block > p:first-child {
+.column-text > p:first-child {
   margin: 0;
 }
 
 @include susy-breakpoint($b-medium) {
-  .l-text-block{
-    padding: $block-padding;
+  .column-text {
     @include pre(1);
     @include span(10);
     column-count: 2;

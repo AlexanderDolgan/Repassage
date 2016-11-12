@@ -8,9 +8,10 @@ header#site-header
 	nav.top-nav
 		h2 Разделы
 		//nav iteration
-		each val in [['Главная', 'index'], ['Ремонт Часов','repair'], ['Часы на продаже', 'shop'], ['Наши работы','pholio'], ['Аксессуары', 'accessories'], ['Обзоры', 'blog'], ['Контакты', 'contacts']]
+		each val in [['Главная', 'index', '.top-nav__links-actie'], ['Ремонт Часов','repair'], ['Часы на продаже', 'shop'], ['Наши работы','pholio'], ['Аксессуары', 'accessories'], ['Обзоры', 'blog'], ['Контакты', 'contacts']]
 
 			a.top-nav__links(href=val[1] + ".html")=val[0]
+			//.top-nav__links-actie
 
 		.social-icons
 			a(href="//www.facebook.com/watchsochi/?ref=aymt_homepage_panel")
@@ -22,7 +23,7 @@ header#site-header
 					use(xlink:href="#tw-btn")
 
 	//hero section
-	section.l-hero.is-centered
+	section.hero.is-centered
 		.logo
 			img(src="img/assets/logo.svg")
 

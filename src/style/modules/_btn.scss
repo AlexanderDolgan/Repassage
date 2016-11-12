@@ -1,3 +1,52 @@
+button {
+  background-color: transparent;
+}
+
+.btn {
+  display: block;
+  font-family: $sans-serif-font-family;
+  position: relative;
+  padding: 1rem 2rem;
+  max-width: 15.625rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 1px solid currentColor;
+  $btn-color-dark: shade($primary-color, 20%);
+  font-size: .8rem;
+  color: tint($primary-color);
+
+  span {
+    position: absolute;
+    display: block;
+    @include size(0);
+    border-radius: 50%;
+    background: $btn-color-dark;
+    transform: translate(-50%, -50%);
+    transition: width 0.66s, height 0.66s;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: tint($primary-color, 75%);
+    text-decoration: none;
+
+    span {
+      @include size(31.25rem);
+    }
+  }
+
+  &:active {
+    background: $primary-color;
+  }
+}
+
+@include susy-breakpoint($b-medium) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
 ////Buttons
 //
 //button {
@@ -41,45 +90,3 @@
 //.btn-disabled {
 //  background-color: #b4b4b5;
 //}
-
-$bg-color: #eeeeee !default;
-
-.btn {
-  display: block;
-  font-family: $sans-serif-font-family;
-  position: relative;
-  padding: 1rem 2rem;
-  max-width: 15.625rem;
-  border-radius: 2rem;
-  text-transform: uppercase;
-  overflow: hidden;
-  border: 1px solid currentColor;
-
-
-  $btn-color-dark: shade($primary-color, 20%);
-  color: tint($primary-color);
-
-  span {
-    position: absolute;
-    display: block;
-    @include size(0);
-    border-radius: 50%;
-    background: $btn-color-dark;
-    transform: translate(-50%, -50%);
-    transition: width 0.66s, height 0.66s;
-    z-index: -1;
-  }
-
-  &:hover {
-    color: tint($primary-color, 75%);
-    text-decoration: none;
-    
-    span {
-      @include size(31.25rem);
-    }
-  }
-
-  &:active {
-    background: $primary-color;
-  }
-}

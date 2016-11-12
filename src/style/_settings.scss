@@ -31,6 +31,9 @@ $body-font-color: $black;
 
 @include add-brand-colors;
 
+$brand-gradient: linear-gradient(to right, $gradient-first-color, $gradient-second-color);
+
+
 // Media q breakpoints
 
 $b-small: 0;

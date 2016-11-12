@@ -1,11 +1,20 @@
 @import "btn";
-@import "nav";
 @import "ham-btn";
 @import "icons";
+@import "social-text";
+@import "copyright";
 
-//blocks
+@import "forms";
+@import "feedback";
+
+@import "nav";
+
+//text large
+@import "quote";
+
+//service text+image
+@import "service-ext";
+
 @import "hero";
 @import "services";
-@import "service-block";
-@import "text-block";
-@import "color-block";
+@import "text";

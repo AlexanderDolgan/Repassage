@@ -1,0 +1,10 @@
+.social {
+  height: 5rem;
+  background-color: $primary-color;
+  padding: 1.6rem;
+  text-align: center;
+  & a {
+    color: $white;
+    padding: 0 1rem;
+  }
+}

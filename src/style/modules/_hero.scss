@@ -1,5 +1,5 @@
 //header center block
-.l-hero {
+.hero {
   text-align: center;
   & .logo {
     margin: 0 auto;
@@ -7,8 +7,8 @@
   }
   //primary header
   & h1 {
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 2.75rem;
+    margin: 3rem 0;
   }
 
   & adress {
@@ -18,14 +18,14 @@
   }
   //btn link
   & a {
-    margin-top: 5rem;
+    margin: 5rem auto 0;
   }
 }
 
 @include susy-breakpoint($b-medium) {
 
   //header center block
-  .l-hero {
+  .hero {
     min-width: 30rem;
     //primary header
     & h1 {

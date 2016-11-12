@@ -26,6 +26,8 @@
     text-transform: uppercase;
 }
 
+
+
 .top-nav__links:hover {
   text-decoration: none;
 }
@@ -50,9 +52,9 @@
 }
 
 .top-nav__links:hover::after,
-.top-nav__links:visited:hover::after {
+.top-nav__links:visited:hover::after,
+.top-nav__links-actie::after {
   width: 80%;
-
 }
 
 //social icons

@@ -1,12 +1,12 @@
-.service-block {
-  @include susy-clearfix();
+.service-ext {
+  @include container();
 }
 
 //service header
-.service-block header{
+.service-ext header{
   position: relative;
   padding: 3rem 1rem;
-  background: linear-gradient(to right, $gradient-first-color, $gradient-second-color);
+  background: $brand-gradient;
   & > h2 {
     color: $white;
   }
@@ -17,7 +17,7 @@
 }
 
 //service content
-.service-block__body {
+.service-ext__body {
     padding: 5rem 1rem;
   & img {
     margin-top: 3rem;
@@ -39,7 +39,7 @@
   }
 
   //add colored block before header
-  .service-block header::before {
+  .service-ext header::before {
     content: '';
     display: block;
     height: 100%;
@@ -51,7 +51,7 @@
   }
 
   //service header
-  .service-block header {
+  .service-ext header {
     position: relative;
     min-height: 17.5rem;
     & h2::before {

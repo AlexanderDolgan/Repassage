@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var $nav = $('.top-nav'),
         $hamBtn = $('.ham-btn'),
-        $lHero = $('.l-hero');
+        $lHero = $('.hero');
 
     $hamBtn.stop().on('click touchstart', function (evt) {
         evt.preventDefault();
@@ -35,7 +35,30 @@ $(document).ready(function () {
                     relY = e.pageY - parentOffset.top;
                 $(this).find('span').css({top:relY, left:relX})
             });
-        $('[href=#]').click(function(){return false});
     });
+
+    //form label transition
+    var $input = $('input');
+    $input.on('focusin', function(){
+        $(this).parent().find('label').addClass('label-active');
+    });//end focusin
+
+    $input.on('focusout', function() {
+        if (!this.value) {
+            $(this).parent().find('label').removeClass('label-active');
+        }
+    });//end focusout
+
+    //textarea
+    var $textarea = $('textarea');
+    $textarea.on('focusin', function(){
+        $(this).parent().find('label').addClass('label-active');
+    });//end focusin
+
+    $textarea.on('focusout', function() {
+        if (!this.value) {
+            $(this).parent().find('label').removeClass('label-active');
+        }
+    });//end focusout
 
 });

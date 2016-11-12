@@ -1,11 +1,9 @@
 //services section
-.l-services{
-  padding: $block-padding;
+.services {
+  @include container();
 }
-
 //items
-.l-services .service-item {
-  padding: 0 1rem;
+.services .service-item {
   margin-bottom: 4rem;
   font-size: 1.125rem;
   text-align: center;
@@ -16,7 +14,7 @@
 
 @include susy-breakpoint($b-medium) {
   //services section
-  .l-services{
+  .services{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,7 +22,7 @@
   }
 
   //items
-  .l-services .service-item {
+  .services .service-item {
     padding: 0 1rem;
     flex-basis: span(4);
     margin-bottom: 0;
